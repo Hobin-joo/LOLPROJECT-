@@ -1,12 +1,10 @@
 //isr
 
-import { getChampions } from "@/utils/champions";
+import Champions from "@/components/_Champions";
 import React from "react";
 
 const ChampionsPage = async () => {
-  const data = await getChampions();
-  console.log(data);
-  return <div>ChampionsPage</div>;
+  return <Champions />;
 };
 
 export default ChampionsPage;

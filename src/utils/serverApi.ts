@@ -20,3 +20,4 @@ export async function GET(request: Request) {
 }
 
 // 서버액션 방법이 따로있음
+
