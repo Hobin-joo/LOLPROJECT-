@@ -1,3 +1,4 @@
+//ssg
 import Item from "@/components/_Item";
 import React from "react";
 

@@ -18,6 +18,7 @@ export async function getChampions(): Promise<Champions[]> {
   );
   const data = await res.json();
   const newData: Champions[] = Object.values(data.data);
+  console.log(newData);
   return newData;
 }
 

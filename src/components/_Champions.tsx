@@ -3,10 +3,11 @@ import React from "react";
 
 const Champions = async () => {
   const champions = await getChampions();
+  console.log(champions);
   return (
     <>
       <div>
-        {champions?.map((p) => {
+        {champions.map((p) => {
           return (
             <div key={p.id}>
               <img
