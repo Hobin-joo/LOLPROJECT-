@@ -12,7 +12,6 @@ export async function GetVersion(): Promise<string[]> {
     }
   );
   const version = await res.json();
-  console.log("=========================");
   console.log(version);
   return version;
 }
