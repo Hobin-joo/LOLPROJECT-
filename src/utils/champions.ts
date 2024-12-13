@@ -8,7 +8,7 @@ export async function getChampions(): Promise<Champions[]> {
     "https://ddragon.leagueoflegends.com/cdn/14.24.1/data/ko_KR/champion.json",
     {
       next: {
-        revalidate: 10000,
+        revalidate: 86400,
       },
       method: "GET",
       headers: {
@@ -18,7 +18,6 @@ export async function getChampions(): Promise<Champions[]> {
   );
   const data = await res.json();
   const newData: Champions[] = Object.values(data.data);
-  console.log(newData);
   return newData;
 }
 
