@@ -7,10 +7,10 @@ const Champions = async () => {
   return (
     <>
       <div>
-        {champions.map((p, _) => {
+        {champions.map((p) => {
           return (
             <Link href={`/champions/${p.id}`}>
-              <div key={_}>
+              <div key={p.id}>
                 <img
                   src={`https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${p.image.full}`}
                   alt={p.name}

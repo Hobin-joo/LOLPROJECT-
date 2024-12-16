@@ -7,6 +7,3 @@ export interface Champions {
     full: string;
   };
 }
-
-
-
