@@ -1,20 +1,29 @@
-import { getItem } from "@/utils/Item";
+import { getItem } from "@/utils/champions";
+import Image from "next/image";
 import React from "react";
 
 const Item = async () => {
   const items = await getItem();
   return (
-    <div>
-      <div>
-        {items.map((p, _) => {
+    <div className="min-h-screen bg-gray-900 text-white p-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {items.map((p, index) => {
           return (
-            <div key={_}>
-              <img
+            <div
+              key={index}
+              className="group p-4 flex flex-col items-center text-center bg-gray-800 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
+            >
+              <Image
                 src={`https://ddragon.leagueoflegends.com/cdn/14.24.1/img/item/${p.image.full}`}
                 alt="404"
+                width={150}
+                height={150}
+                className="rounded-md border border-gray-700"
               />
-              <h1>{p.name}</h1>
-              <p>{p.plaintext}</p>
+              <h1 className="text-lg font-bold mt-4 group-hover:text-gray-300 transition-colors duration-300">
+                {p.name}
+              </h1>
+              <p className="text-gray-400 mt-2">{p.plaintext}</p>
             </div>
           );
         })}
@@ -24,3 +33,4 @@ const Item = async () => {
 };
 
 export default Item;
+

@@ -14,5 +14,15 @@ export interface Detail {
       magic: number;
       difficulty: number;
     };
+    spells: [
+      {
+        id: string;
+        name: string;
+        description: string;
+        image: {
+          full: string;
+        };
+      }
+    ];
   };
 }
