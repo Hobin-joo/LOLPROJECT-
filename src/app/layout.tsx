@@ -9,8 +9,8 @@ import { DarkModeBtn } from "@/components/DarkModeBtn";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "빈의 앱!",
-  description: "LOL 챔피언소개 앱!",
+  title: "LOL APP!",
+  description: "LOL Champion APP!",
 };
 
 export default function RootLayout({
