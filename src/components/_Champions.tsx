@@ -1,10 +1,12 @@
 import { getChampions } from "@/utils/champions";
+import { getVersion } from "@/utils/serverApi";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 const Champions = async () => {
   const champions = await getChampions();
+  const version = await getVersion();
   return (
     <>
       <div className="min-h-screen  text-white p-8">
@@ -18,7 +20,7 @@ const Champions = async () => {
               >
                 <div className="p-4 flex flex-col items-center text-center">
                   <Image
-                    src={`https://ddragon.leagueoflegends.com/cdn/14.24.1/img/champion/${p.image.full}`}
+                    src={`https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${p.image.full}`}
                     alt={p.name}
                     width={150}
                     height={150}
