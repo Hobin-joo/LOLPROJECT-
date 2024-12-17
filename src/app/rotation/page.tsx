@@ -29,7 +29,7 @@ export default function RotationPage() {
           return (
             <div
               key={p.id}
-              className="bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="group p-4 flex flex-col items-center text-center bg-gray-800 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-transform duration-300"
             >
               <Link href={`/champions/${p.id}`}>
                 <div className="p-4 flex flex-col items-center">

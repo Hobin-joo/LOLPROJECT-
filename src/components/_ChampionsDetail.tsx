@@ -16,7 +16,7 @@ const ChampionsDetail = async ({ params }: Props) => {
   const version = await getVersion();
 
   return (
-    <div className="text-white flex flex-col items-center  px-5">
+    <div className="text-white flex flex-col items-center px-5">
       <Image
         src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${id}_0.jpg`}
         alt={champion[id].name}

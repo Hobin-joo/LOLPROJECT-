@@ -1,8 +1,11 @@
 import { getChampions } from "@/utils/champions";
 import { getVersion } from "@/utils/serverApi";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+
 
 const Champions = async () => {
   const champions = await getChampions();
