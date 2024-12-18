@@ -16,8 +16,8 @@ export async function GET(request: Request) {
     );
     const data: ChampionRotation = await res.json();
     const champions = await getChampions();
-    const newChampions = champions.filter((p) =>
-      data.freeChampionIds.includes(Number(p.key))
+    const newChampions = champions?.filter((p) =>
+      data.freeChampionIds?.includes(Number(p.key))
     );
     return NextResponse.json(newChampions);
   } catch (error) {
