@@ -17,8 +17,14 @@ export async function GET(request: Request) {
   );
   const data: ChampionRotation = await res.json();
   const champions = await getChampions();
-  const newChampions = champions.filter((p) =>
+  const newChampions = champions?.filter((p) =>
     data.freeChampionIds.includes(Number(p.key))
   );
   return NextResponse.json(newChampions);
 }
+
+// 문제가 발생할 수 있는 코드
+// const result = someArray.filter(item => item.includes('keyword'));
+
+// // 수정된 코드
+// const result = Array.isArray(someArray) ? someArray.filter(item => item.includes('keyword')) : [];
