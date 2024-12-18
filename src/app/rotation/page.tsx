@@ -11,7 +11,7 @@ export default function RotationPage() {
   const { data: data, isLoading } = useQuery({
     queryKey: ["rotation"],
     queryFn: async () => {
-      const res = await fetch("http://localhost:3000/api/rotation");
+      const res = await fetch("https://lolproject-ten.vercel.app/api/rotation");
       const data: Champions[] = await res.json();
       return data;
     },
