@@ -16,6 +16,7 @@ export default function RotationPage() {
       return data;
     },
   });
+  console.log("data", data);
 
   if (isLoading) <>"Loading..."</>;
 
