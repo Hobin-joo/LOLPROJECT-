@@ -25,7 +25,6 @@ export default function RootLayout({
           <header className="fixed top-0 left-0 w-full bg-gray-800 text-white shadow-md z-20">
             <div className="container mx-auto flex justify-between items-center py-4 px-6">
               <div className="text-xl font-bold">
-                {" "}
                 <Link
                   href={"/"}
                   className="hover:text-gray-300 transition-colors duration-200"
